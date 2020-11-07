@@ -10,10 +10,13 @@ entries:
       - title: Research interests include Information Security and Image Processing (primarily AI-driven)
 
   - title: Posts
+    url: false
     entries:
     - title: Recent
+      url: false
       post_list: true
     - title: Medium (older blog posts)
+      url: false
       entries:
         - title: OAuth2.0 from Scratch — Auth-Code Flows and RBAC with NodeJS
           url: https://medium.com/bugbountywriteup/oauth2-0-from-scratch-auth-code-flows-and-rbac-with-nodejs-dda9b51a4c36
@@ -26,6 +29,7 @@ entries:
 
 
   - title: Research Publication
+    url: false
     entries:
       - title: Unidirectional Ensemble Recognition and Translation of Phrasal Sign Language from ASL to ISL
         url: https://link.springer.com/chapter/10.1007%2F978-981-15-7062-9_24
