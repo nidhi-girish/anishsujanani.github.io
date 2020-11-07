@@ -107,3 +107,11 @@ The **Client** gets back a token within a signed JWT containing user attributes.
 **OAuth2.0 can not only be used for delegating consent and authentication to a trusted party , but also for centralizing RBAC for internal highly trusted applications.**
 
 ## Further reading
+- [Code-base for this article](https://github.com/asi7296/100_days_of_infosec/tree/master/Identity/implementation/oauth_from_scrach)
+- [OAuth 2.0 and OpenID Connect — Okta](https://www.youtube.com/watch?v=996OiexHze0&t=54s)
+- [RFC-6749 — Defining the protocol](https://tools.ietf.org/html/rfc6749)
+- [Different OAuth Flows and when to use what — Auth0](https://auth0.com/docs/api-auth/which-oauth-flow-to-use)
+- [CSRF Explained — OWASP](https://owasp.org/www-community/attacks/csrf#:~:text=Cross%2DSite%20Request%20Forgery%20(CSRF,which%20they're%20currently%20authenticated.)
+- [JWT Explained](https://jwt.io/introduction/#:~:text=JSON%20Web%20Token%20(JWT)%20is,parties%20as%20a%20JSON%20object.&text=JWTs%20can%20be%20signed%20using,pair%20using%20RSA%20or%20ECDSA.)
+- [OpenID Connect on top of OAuth2.0](https://openid.net/connect/)
+
