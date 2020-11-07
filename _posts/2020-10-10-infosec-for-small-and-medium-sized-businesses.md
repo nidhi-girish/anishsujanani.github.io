@@ -1,16 +1,16 @@
 Regardless of the size of an organization, a successful security program requires well rounded control implementation across multiple domains and business units. This article aims to provide context on the same.
 
 ## Topics:
-- [Asset Management](#Asset-Management)
-- [System Security](#System-Security)
-- [Network Security](#Network-Security)
-- [Log Management & Monitoring](#Log-Management-&-Monitoring)
-- [Modelling & Risk Assessment](#Modelling-&-Risk-Assessment)
-- [Vulnerability Management and Patching](#Vulnerability-Management-and-Patching)
-- [Privacy](#Privacy)
-- [Awareness](#Awareness)
-- [Additional Resources](#Additional-Resources)
-- [Beyond the Basics](#Beyond-the-Basics)
+- [Asset Management](#asset-management)
+- [System Security](#system-security)
+- [Network Security](#network-security)
+- [Log Management & Monitoring](#log-management-and-monitoring)
+- [Modelling & Risk Assessment](#modelling-and-risk-assessment)
+- [Vulnerability Management and Patching](#vulnerability-management-and-patching)
+- [Privacy](#privacy)
+- [Awareness](#awareness)
+- [Additional Resources](#additional-resources)
+- [Beyond the Basics](#beyond-the-basics)
 
 ## Asset Management
 ### What?
@@ -61,7 +61,7 @@ Regardless of the size of an organization, a successful security program require
 - **Network Intrusion Detection Systems (NIDS):** usually corresponds to systems that sit behind your edge routers that listen to all the traffic going within and outside of your organization. These engines are capable of picking up on patterns and anomalies within the traffic to indicate external and internal attacks. Common open-source NIDS engines include BroIDS (now renamed to Zeek), Snort and Suricata.
 - **Application Protocol Security:** Ensure that applications communicating over your network are doing so via secure means. This implies services such as FTP, IMAP/SMTP, HTTP, etc. over TLS (previously SSL) channels.
 
-## Log Management & Monitoring
+## Log Management and Monitoring
 ### What?
 - Given that you now have a considerable number of systems and software to secure, your staff cannot monitor individual systems efficiently. Coupled with the alerts from your System Security and Network Security solutions, it is necessary to aggregate these logs to a centralised system — a SIEM system (Security Information and Event Management).
 
@@ -80,7 +80,7 @@ Regardless of the size of an organization, a successful security program require
 - Cloud Service Providers provide their own console interfaces for log analysis and security alerts, however, their scope might be limited to their own leased infrastructure alone. See, AWS CloudTrail.
 - One of the most comprehensive articles I have come across in explaining what an SIEM is, is available here.
 
-## Modelling & Risk Assessment
+## Modelling and Risk Assessment
 ### What?
 - Modelling might be less technical in terms of technology, but is a crucial architectural process. It usually involves a highly experienced security professional who looks at your business process as a whole, identifies the systems and technologies you are using, and all the possible ways things could go wrong. In formal terms, a ‘risk assessment’ is done, either in terms of qualitative or quantitative risk, and recommendations are made to reduce said risk.
 
