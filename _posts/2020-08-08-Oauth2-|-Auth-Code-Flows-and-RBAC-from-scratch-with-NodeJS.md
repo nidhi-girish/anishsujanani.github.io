@@ -51,7 +51,7 @@ As seen earlier, the **Resource-Owner** submitting the form on the Client’s pa
 Once the Client’s request parameters have been verified, the **Authorization-Server** needs to authenticate the **Resource-Owner**. This may be done through a traditional email-password entry or through other factors and creation of a session with user details. For simplicity, this implementation assumes a single generic user and uses a button to simulate successful authentication.
 
 The authentication page that the **Authorization-Server** presents after validating the incoming **Client** request:
-[oauth_2](https://raw.githubusercontent.com/anishsujanani/anishsujanani.github.io/master/assets/img/oauth_2.png)
+![oauth_2.png]({{site.baseurl}}/assets/img/oauth_2.png)
 
 ### Does this look familiar?
 This is essentially what you see when you sign in with Google or install new applications that ask for permissions, eg. ‘this app would like access to make phone calls, read contacts, read messages’, etc. Each of these ‘permissions’ would be formally defined by **Resource-Servers** , integrated with the **Authorization-Server** and requested by the Client, typically with a naming convention such as ‘phone:write contacts:read messages:read’.
@@ -75,7 +75,7 @@ The **Authorization-Server** then places the token corresponding to that code in
 
 ## The Result
 Now that all 4 steps have been completed, here is what the **Client** sees:
-[oauth_3](https://raw.githubusercontent.com/anishsujanani/anishsujanani.github.io/master/assets/img/oauth_3.png)
+![oauth_3.png]({{site.baseurl}}/assets/img/oauth_3.png)
 
 A token within a signed JWT from the trusted **Authorization-Server** that it registered with. This token is proof that the **Resource-Owner** did, in fact, authenticate successfully with the **Authorization-Server** and consented to the **Client** getting the ‘resource1_read resource1_write’ permissions.
 The **Client** app may then use this token with other API services that require those permissions.
@@ -96,11 +96,11 @@ This requires changes to Step 2: **Authorization-Server** — Authenticating the
 When the **Client** requests for a ‘getallrolesandperms’ scope, carry out the same **Resource-Owner** authentication and consent process but generate a token that contains all the applications and roles that the **Resource-Owner** has access to.
 
 Minor change to the client’s front-end page to allow a user to pick this scope:
-[oauth_4](https://raw.githubusercontent.com/anishsujanani/anishsujanani.github.io/master/assets/img/oauth_4.png)
+![oauth_4.png]({{site.baseurl}}/assets/img/oauth_4.png)
 
 ## The Results — Extending OAuth2.0 for RBAC
 
-[oauth_5](https://raw.githubusercontent.com/anishsujanani/anishsujanani.github.io/master/assets/img/oauth_5.png)
+![oauth_5.png]({{site.baseurl}}/assets/img/oauth_5.png)
 
 The **Client** gets back a token within a signed JWT containing user attributes. This can then be used to implement RBAC within the application and user-specific content tailoring. You may also be interested in OpenID Connect (see references) — an additional Identity Layer on top of OAuth2.0 through defining a new scope.
 
