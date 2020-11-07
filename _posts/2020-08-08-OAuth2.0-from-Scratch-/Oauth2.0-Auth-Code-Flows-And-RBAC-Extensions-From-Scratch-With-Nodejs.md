@@ -11,7 +11,7 @@ _For example, a web application offering a ‘Sign in with Google’ feature and
 # Terminology
 - **Resource-Owner**:** the end-user who will consent to permissions and authenticate.
 - **Client:** the application accessed by the **Resource-Owner** that would like to access a service that the **Resource-Owner** uses (typically via API).
-- *A*uthorization-Server:** the centralized server that carries out the actual authentication and scopes the access of the **Client** to the **Resource-Owner**’s resources.
+- **Authorization-Server:** the centralized server that carries out the actual authentication and scopes the access of the **Client** to the **Resource-Owner**’s resources.
 - **Resource-Server:** are application servers that provide API services. This server will issue services based on the access token provided to it by a Client. It fully trusts that access token as it has been issued by the centralized **Authorization-Server** that this server is also integrated with.
 
 OAuth2.0 provides multiple auth-flows, of which the `Authorization Code Flow` is primarily used for **Resource-Owner**s communicating with **Client** web applications and goes as follows:
@@ -79,7 +79,7 @@ This works great when a third-party application requires permissions to access u
 # Extending OAuth2.0 for Role Based Access Control
 You might have multiple internal applications developed by different teams. Having each team maintain their own user-base, permission system and authentication procedure is not only inefficient but is usually insecure.
 We can extend the OAuth Auth Code Flow for RBAC by implementing a new scope on the **Authorization-Server** that returns all the roles and attributes for the **Resource-Owner**.
-This requires changes to Step 2: **Authorization-Server** — Authenticating the **Resource-Owner** and Sending back a Code to the Client.
+This requires changes to Step 2: **Authorization-Server** — Authenticating the **Resource-Owner** and Sending back a Code to the **Client**.
 When the **Client** requests for a ‘getallrolesandperms’ scope, carry out the same **Resource-Owner** authentication and consent process but generate a token that contains all the applications and roles that the **Resource-Owner** has access to.
 
 Minor change to the client’s front-end page to allow a user to pick this scope:
