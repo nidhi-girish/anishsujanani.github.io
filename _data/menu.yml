@@ -6,8 +6,11 @@ entries:
     url: false
     entries:
       - title: Computer Science Engineer
+        url: false
       - title: Currently involved in automation and analytics within software security
+        url: false
       - title: Research interests include Information Security and Image Processing (primarily AI-driven)
+        url: false
 
   - title: Posts
     url: false
