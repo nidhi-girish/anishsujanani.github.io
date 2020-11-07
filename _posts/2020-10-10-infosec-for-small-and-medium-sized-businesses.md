@@ -1,16 +1,16 @@
 Regardless of the size of an organization, a successful security program requires well rounded control implementation across multiple domains and business units. This article aims to provide context on the same.
 
 ## Topics:
-- [Asset Management](#asset-management)
-- [System Security](#system-security)
-- [Network Security](#network-security)
-- [Log Management & Monitoring](#log-management-and-monitoring)
-- [Modelling & Risk Assessment](#modelling-and-risk-assessment)
-- [Vulnerability Management and Patching](#vulnerability-management-and-patching)
-- [Privacy](#privacy)
-- [Awareness](#awareness)
-- [Additional Resources](#additional-resources)
-- [Beyond the Basics](#beyond-the-basics)
+- Asset Management
+- System Security
+- Network Security
+- Log Management and Monitoring
+- Modelling and Risk Assessment
+- Vulnerability Management and Patching
+- Privacy
+- Awareness
+- Additional Resources
+- Beyond the Basics
 
 ## Asset Management
 ### What?
