@@ -29,8 +29,6 @@ entries:
     - title: Medium (older blog posts)
       url: false
       entries:
-        - title: OAuth2.0 from Scratch — Auth-Code Flows and RBAC with NodeJS
-          url: https://medium.com/bugbountywriteup/oauth2-0-from-scratch-auth-code-flows-and-rbac-with-nodejs-dda9b51a4c36
         - title: Info-Sec for the Small and Medium-sized Businesses
           url: https://medium.com/bugbountywriteup/info-sec-for-the-small-and-medium-sized-businesses-130bc02d7eb7
         - title: SameSite Cookies and Session Security
