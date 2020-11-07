@@ -2,14 +2,22 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
+  - title: About me
     url: false
     entries:
-      - title: Blog posts and project ideas
+      - title: Computer Science Engineer, currently focused on Automation and Analytics within Information Security
         url: false
-
-  - title: thoughts
+      - title: Professional and research interests primarily include Information Security, Cloud Computing and AI-driven Image Processing
+        url: false
+  - title: Posts
     post_list: true
     url: false
     entries: false
 
+  - title: Research Publication
+    url: false
+    entries:
+      - title: Unidirectional Ensemble Recognition and Translation of Phrasal Sign Language from ASL to ISL
+        url: https://link.springer.com/chapter/10.1007%2F978-981-15-7062-9_24
+      - title: 802.11 Frame-level Network IDS for Public Wireless Networks
+        url: Online publication pending
