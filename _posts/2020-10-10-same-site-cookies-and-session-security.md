@@ -21,7 +21,7 @@ The above would look like a link for cat photos but following it would invoke ac
 - Implementing strong same-site cookie policies.
 
 ## Server Set-up
-Host: `yourcriticalservice`
+Host: yourcriticalservice
 
 ### Routes:
 - User: `GET /` ................... Server: returns static page with a ‘get cookie’ button (which invokes POST /requestcookie)
@@ -95,7 +95,7 @@ app.listen(5000, function() {
 ```
 
 ## Simulating a Bad-actor's server (running on localhost)
-Below is the server that a bad actor might run. Note that it is running on a different origin compared to `yourcriticalservice`:
+Below is the server that a bad actor might run. Note that it is running on a different origin compared to yourcriticalservice:
 ```python
 import flask
 import os
@@ -115,7 +115,8 @@ app.run(host='localhost', port=8000, debug=True)
 ```
 
 
-Below are the links that you, the user of `yourcriticalservice` would be directed to interact with:
+Below are the links that you, the user of yourcriticalservice would be directed to interact with:
+
 `bget.html`:
 ```
 <html>
