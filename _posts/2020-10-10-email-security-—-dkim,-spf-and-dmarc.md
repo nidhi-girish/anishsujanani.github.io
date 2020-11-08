@@ -84,4 +84,4 @@ As seen above, DMARC is a framework that ties together DKIM and SPF validation, 
 - Prevent email sender spoofing, contributing to maintaining a healthy spam score and domain reputation - SPF
 - Extending the above for main domains and subdomains, granularity of control, reporting and analytics - DMARC
 
-It is particularly interesting to me how all 3 of the above controls/frameworks rely on DNS as an implementation backbone.
+It is particularly interesting to me how all three of the above controls rely on DNS as an implementation backbone.
