@@ -13,7 +13,7 @@
 </html>
 ```
 
-![webapp_1.png]({{site.baseurl}}/assets/img/webapp_1.png)
+![webapp_1.png]({{site.baseurl}}/assets/img/webapp_1.PNG)
 
 
 **After uploading a file, we get back a link that we can follow to either view the image and/or share it with others:**
@@ -79,10 +79,10 @@ In case of our web application, once you upload an image, it is invoked server-s
 
 ## What happens if we embed PHP?
 ### Server-side execution
-![webapp_4.png]({{site.baseurl}}/assets/img/webapp_4.png)
+![webapp_4.png]({{site.baseurl}}/assets/img/webapp_4.PNG)
 
 Once uploaded, we get the following:
-![webapp_5.png]({{site.baseurl}}/assets/img/webapp_5.png)
+![webapp_5.png]({{site.baseurl}}/assets/img/webapp_5.PNG)
 
 On clicking the image, the server would `include()` the file we just uploaded, causing the payload to run, resulting in:
 ![webapp_6.png]({{site.baseurl}}/assets/img/webapp_6.png)
