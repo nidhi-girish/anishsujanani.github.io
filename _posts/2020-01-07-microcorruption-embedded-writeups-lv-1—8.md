@@ -9,9 +9,9 @@ You are provided with the disassembly of the firmware, a debugger, run-time stac
 ## Level 8: Montevideo
 *Requires knowledge of memory overflow/overwrite - see Level 7 write-up*
 
-The release notes state that the software has been revamped and now follows ‘better security practices’. However, the fact that strcpy and memset are introduced in the firmware likely says otherwise.
+The release notes state that the software has been revamped and now follows ‘better security practices’. However, the fact that `strcpy` and `memset` are introduced in the firmware likely says otherwise.
 
-The login routine calls getsn which takes in user input, which is stored at `0x2400`. This address is loaded into `r14`, and address `0x43ec` is loaded into `r15`. `strcpy` is then called, which copies input from the former to the latter address.
+The `login` routine calls `getsn` which takes in user input, which is stored at `0x2400`. This address is loaded into `r14`, and address `0x43ec` is loaded into `r15`. `strcpy` is then called, which copies input from the former to the latter address.
 
 `0x2400` is loaded into `r15` and `memset` is invoked. This clears out the original input in memory.
 
