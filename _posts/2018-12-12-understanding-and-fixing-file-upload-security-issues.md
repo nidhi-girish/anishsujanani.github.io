@@ -82,25 +82,25 @@ In case of our web application, once you upload an image, it is invoked server-s
 ### Server-side execution
 ![webapp_4.png]({{site.baseurl}}/assets/img/webapp_4.png)
 
-Once uploaded, we get the following:
+- Once uploaded, we get the following:
 ![webapp_5.png]({{site.baseurl}}/assets/img/webapp_5.png)
 
-On clicking the image, the server would `include()` the file we just uploaded, causing the payload to run, resulting in:
+- On clicking the image, the server would `include()` the file we just uploaded, causing the payload to run, resulting in:
 ![webapp_6.png]({{site.baseurl}}/assets/img/webapp_6.png)
 
 ### Returning JS
 ![webapp_7.png]({{site.baseurl}}/assets/img/webapp_7.png)
 
-On following the view/share link, we get a page that shows:
+- On following the view/share link, we get a page that shows:
 ![webapp_8.png]({{site.baseurl}}/assets/img/webapp_8.png)
 
-Unless cookies are marked http-only, we now have access to them via the JS browser API.
+- Unless cookies are marked http-only, we now have access to them via the JS browser API.
 
 ### Remote Login
-On our remote machine:
+- On our remote machine:
 `nc -lvp 4444`
 
-Make sure firewall rules ALLOW on the port:
+- Make sure firewall rules ALLOW on the port:
 ```
 sudo iptables -I INPUT -p tcp --dport 4444 -j ACCEPT
 sudo iptables -I OUTPUT -p tcp --dport 4444 -j ACCEPT
@@ -108,9 +108,9 @@ sudo iptables -I OUTPUT -p tcp --dport 4444 -j ACCEPT
 
 ![webapp_9.png]({{site.baseurl}}/assets/img/webapp_9.png)
 
-Once we upload the image and follow the view/share link, we see a connection log on our listener - we have a shell on the system.
+- Once we upload the image and follow the view/share link, we see a connection log on our listener - we have a shell on the system.
 
-If the web-server was running as root, we would now have full access to the system. 
+- If the web-server was running as root, we would now have full access to the system. 
 
 ## Preventing all of the above
 - Validating files based on just their extensions via string comparisons is pointless.
