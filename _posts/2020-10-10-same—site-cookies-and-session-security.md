@@ -172,6 +172,6 @@ Top-level redirection does not transmit the set cookie, Cross-origin POST does n
 
 ---------------
 
-It is important to understand that SOP, CORS and Same-Site cookie policies are all browser protections. It is trivial to alter headers or send requests out directly via script. You still need to emphasize strong anti-CSRF protection on your forms and implement input sanitization+CSP to prevent injection.
+It is important to understand that SOP, CORS whitelisting and same-site cookie policies are all browser protections. It is trivial to alter headers or send requests out directly via script. You still need to emphasize strong anti-CSRF protection on your forms and implement input sanitization+CSP to prevent injection.
 
 With that said, the ‘strict’ setting is worth implementing in critical applications where zero external service interaction is a requirement.
