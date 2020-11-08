@@ -22,18 +22,5 @@ entries:
 
   - title: Posts
     url: false
-    entries:
-    - title: Recent
-      url: false
-      post_list: true
-    - title: Medium (older blog posts)
-      url: false
-      entries:
-        - title: Info-Sec for the Small and Medium-sized Businesses
-          url: https://medium.com/bugbountywriteup/info-sec-for-the-small-and-medium-sized-businesses-130bc02d7eb7
-        - title: SameSite Cookies and Session Security
-          url: https://medium.com/bugbountywriteup/samesite-cookies-and-session-security-1cd1fea1eb0b
-        - title: NahamCon 2020 CTF Writeup
-          url: https://medium.com/bugbountywriteup/nahamcon-2020-ctf-writeup-33105bee3ffd
-
-
+    post_list: true
+    
