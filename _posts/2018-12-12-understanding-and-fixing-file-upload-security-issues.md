@@ -2,7 +2,7 @@
 
 ## Understanding the Application
 - Navigating to our test application brings us to an upload page:
-```php
+```
 <html<
   <h1>Upload an image:</h1>
   <form action="upload.php" method="POST" enctype="multipart/form-data"">
@@ -16,7 +16,7 @@
 - After uploading a file, we get back a link that we can follow to either view the image and/or share it with others:
 ![webapp_2.png]({{site.baseurl}}/assets/img/webapp_2.png)
 
-```php
+```
 <?php
   if( isset($_POST["submit"]) ) {
     $upload_dir = "./uploads";
@@ -36,7 +36,7 @@
 ```
 
 - Viewing the image:
-```php
+```
 <? php
   include("./uploads" . $_GET['id']);
   // storing the above in a variable, further processing ...
@@ -51,7 +51,7 @@ This implies that only the first few bytes are considered in validating a file t
 
 ### What happens when we try injecting random non-file-specific data into the file? Can we still convince the OS that the file is valid?
 Below is a snippet from a tool I wrote to embed content in media files.
-```python
+```
 # also modifying height, width, bit-depth of image
 # hardcoded to 256x256, 24-bit depth
 # uses the args dict, eg: args = {'ext' = 'png', text = 'some text here'}
