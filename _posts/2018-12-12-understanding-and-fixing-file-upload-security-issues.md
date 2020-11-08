@@ -1,5 +1,7 @@
 ## A commonly overlooked PHP programming flaw, Linux magic numbers, Python and NC. How much could go wrong?
 
+*Note: This article has been migrated from my old blog*
+
 ## Understanding the Application
 - **Navigating to our test application brings us to an upload page:**
 
