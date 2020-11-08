@@ -151,7 +151,7 @@ Simply put, after all the complex decryption of instructions into memory and obf
 
 ## Level 5: Cusco
 
-Fuzzing the input with AABBCCDDEEFFGGHHIIJJKKLL results in a program crash — insn address misaligned. 
+Fuzzing the input with `AABBCCDDEEFFGGHHIIJJKKLL` results in a program crash — `insn address misaligned`. 
 
 Below is a capture of register values at the point of crash. We see that `AABBCCDDEEFFGGHH` is accepted, however `II (4949)` overwrites the `pc`
 
@@ -173,13 +173,13 @@ What happens when you enter 16 bytes followed by the above?
 
 The ‘release notes’ state that a new component — the `HSM-1` (Hardware Security Module-1) has been introduced. The manual states that interrupt `0x7d` triggers the HSM to compare an input password with a password stored within its memory, and place the result of the comparison at some byte location in the memory space of our firmware. Reading further into the documentation of the interrupt vectors — the first parameter passed on the stack is a pointer to the start of input, the second parameter, also passed on the stack is the location where the HSM is to write the result of the comparison.
 
-The main function calls login — whose disassembly is below:
+The `main` function calls `login` — whose disassembly is below:
 
 ![mc_4_1.png]({{site.baseurl}}/assets/img/mc_4_1.png)
 
 As usual, input is read into location `0x2400` through the getsn function — which internally calls the gets interrupt. We also move `0x1c` into `r14` (instruction `4534`) — and then call `test_password_valid`.
 
-The disassembly of test_password_valid is below:
+The disassembly of `test_password_valid` is below:
 
 ![mc_4_2.png]({{site.baseurl}}/assets/img/mc_4_2.png)
 
@@ -224,7 +224,7 @@ Our input is written sequentially into memory, but we compare with literal value
 
 ## Level 2 — “New Orleans”
 
-On first impressions, the`main` function looks pretty straightforward — a call to `getsn` to accept user input, and then a call to `check_password`.
+On first impressions, the `main` function looks pretty straightforward — a call to `getsn` to accept user input, and then a call to `check_password`.
 
 The disassembly of `check_password` is below:
 
@@ -247,7 +247,7 @@ If the comparison does check out and we have the same first byte — (ascii) ] o
 
 ### Method 2
 
-Another interesting find here is before user input is even taken in the main function, another function `create_password` is called, whose disassembly is below:
+Another interesting find here is before user input is even taken in the `main` function, another function `create_password` is called, whose disassembly is below:
 
 ![mc_2_3.png]({{site.baseurl}}/assets/img/mc_2_3.png)
 
