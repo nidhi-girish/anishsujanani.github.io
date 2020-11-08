@@ -6,7 +6,7 @@ _Disclaimer: I have specified links to projects/products in this artcle for vari
 - Asset Management
 - System Security
 - Network Security
-- Log Management and Monitoring
+- Log Management
 - Modelling and Risk Assessment
 - Vulnerability Management and Patching
 - Privacy
@@ -63,7 +63,7 @@ _Disclaimer: I have specified links to projects/products in this artcle for vari
 - **Network Intrusion Detection Systems (NIDS):** usually corresponds to systems that sit behind your edge routers that listen to all the traffic going within and outside of your organization. These engines are capable of picking up on patterns and anomalies within the traffic to indicate external and internal attacks. Common open-source NIDS engines include [BroIDS](https://www.zeek.org/) (now renamed to Zeek), [Snort](https://www.snort.org/) and [Suricata](https://suricata-ids.org/).
 - **Application Protocol Security:** Ensure that applications communicating over your network are doing so via secure means. This implies services such as FTP, IMAP/SMTP, HTTP, etc. over TLS (previously SSL) channels.
 
-## Log Management and Monitoring
+## Log Management
 ### What?
 - Given that you now have a considerable number of systems and software to secure, your staff cannot monitor individual systems efficiently. Coupled with the alerts from your System Security and Network Security solutions, it is necessary to aggregate these logs to a centralised system — a SIEM system (Security Information and Event Management).
 
