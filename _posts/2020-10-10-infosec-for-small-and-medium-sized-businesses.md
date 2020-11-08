@@ -1,5 +1,7 @@
 Regardless of the size of an organization, a successful security program requires well rounded control implementation across multiple domains and business units. This article aims to provide context on the same.
 
+_Disclaimer: I have specified links to projects/products in this artcle for various controls that I have either used in independent projects or that I have seen commonly recommended. I am not affiliated with any of the projects/vendors listed. All opinions stated are purely my own and do not represnt any other entity._
+
 ## Topics:
 - Asset Management
 - System Security
@@ -28,9 +30,9 @@ Regardless of the size of an organization, a successful security program require
 
 ### How?
 - Relatively smaller environments might be able to get away with manually recording information, however, would run into problems in continuous monitoring of existing and growing assets.
-- Open-source solutions such as osQuery are widely recommended, though it might require manual tweaking for your environment.
-- There are a wide variety of solutions that have a free tier with a limited feature set, that can be licensed based on the storage space, feature-set and vendor support requirements. Commonly stated products include AssetTiger, Rumble and SnipeIT, among many others.
-- Cloud service providers provide automated dashboards of the services you are leasing from them. Eg. AWS Systems Manager Inventory.
+- Open-source solutions such as [osQuery](https://osquery.io/) are widely recommended, though it might require manual tweaking for your environment.
+- There are a wide variety of solutions that have a free tier with a limited feature set, that can be licensed based on the storage space, feature-set and vendor support requirements. Commonly stated products include [AssetTiger](https://www.myassettag.com/assettiger/), [Rumble](https://www.rumble.run/) and [SnipeIT](https://snipeitapp.com/), among many others.
+- Cloud service providers provide automated dashboards of the services you are leasing from them. Eg. [AWS Systems Manager Inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html).
 
 ## System Security
 ### What?
@@ -43,8 +45,8 @@ Regardless of the size of an organization, a successful security program require
 - **Anti-Virus (AV) and Host-based Intrusion Detection Systems (HIDS):** Contrasted to traditional AV, HIDS solutions provide extensive detection capability by combining signature-based detection, anomaly-detection and behavioural pattern changes. These systems monitor processes and network activity and typically integrate with log management / SIEM solutions to provide holistic logging, correlation of events and alerting.
 
 ### How?
-- **System hardening:** now that a range of benchmarking and automation solutions are available, manual hardening is a thing of the past. Ansible and Chef are arguably the most popular solutions for automating infrastructure builds. CIS also puts out comprehensive documentation on hardening practices for a variety of operating systems. Automated evaluation solutions are also available, OpenSCAP is recommended.
-- **Baselining and File Integrity Monitoring:** Open source products include AIDE for Linux and the OSSEC suite. Most enterprise HIDS solutions include a FIM component.
+- **System hardening:** now that a range of benchmarking and automation solutions are available, manual hardening is a thing of the past. [Ansible](https://www.ansible.com/) and [Chef](https://www.chef.io/) are arguably the most popular solutions for automating infrastructure builds. CIS also puts out [comprehensive documentation on hardening practices](https://www.cisecurity.org/cis-benchmarks/) for a variety of operating systems. Automated evaluation solutions are also available, [OpenSCAP](https://www.open-scap.org/) is quite popular.
+- **Baselining and File Integrity Monitoring:** Open source products include [AIDE](https://aide.github.io/) for Linux and the [OSSEC](https://www.ossec.net/) suite. Most enterprise HIDS solutions include a FIM component.
 - **HIDS solutions:** Open source solutions include OSSEC and osQuery. There are a wide variety of enterprise solutions to choose from if you need vendor implementation and support.
 
 ## Network Security
@@ -56,9 +58,9 @@ Regardless of the size of an organization, a successful security program require
 - Listed below are basic measures that should be taken to secure your networks. You should definitely consult with your engineers to implement more specific controls within this domain.
 
 ### How? (The basic measures, at least)
-- **Segment your networks:** Absolutely critical. Put your public-facing machines on a different network/subnet from your internal machines. This can be done in many ways depending on your set-up, but it typically comes down to implementing multiple VLANs on your switches OR by setting up different virtual subnets through your cloud service provider. Ensure that your routing tables and ACLs follow the principle of least privilege.
+- **Segment your networks:** Absolutely critical. Put your public-facing machines on a different network/subnet from your internal machines. This can be done in many ways depending on your set-up, but it typically comes down to implementing multiple VLANs on your switches OR by setting up different virtual subnets through your cloud service provider. Ensure that your routing tables and ACLs follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 - **Firewall Management:** If you are running with a cloud vendor, you would not have to manage a firewall as such. Instead, you would be focused on setting up access rules to machines. Connections should not be allowed in or out of your network unless it is absolutely required. Traditional firewalls come in multiple flavours, deployed as hardware or software solutions with machine learning and API extensions built-in.
-- **Network Intrusion Detection Systems (NIDS):** usually corresponds to systems that sit behind your edge routers that listen to all the traffic going within and outside of your organization. These engines are capable of picking up on patterns and anomalies within the traffic to indicate external and internal attacks. Common open-source NIDS engines include BroIDS (now renamed to Zeek), Snort and Suricata.
+- **Network Intrusion Detection Systems (NIDS):** usually corresponds to systems that sit behind your edge routers that listen to all the traffic going within and outside of your organization. These engines are capable of picking up on patterns and anomalies within the traffic to indicate external and internal attacks. Common open-source NIDS engines include [BroIDS](https://www.zeek.org/) (now renamed to Zeek), [Snort](https://www.snort.org/) and [Suricata](https://suricata-ids.org/).
 - **Application Protocol Security:** Ensure that applications communicating over your network are doing so via secure means. This implies services such as FTP, IMAP/SMTP, HTTP, etc. over TLS (previously SSL) channels.
 
 ## Log Management and Monitoring
@@ -75,10 +77,10 @@ Regardless of the size of an organization, a successful security program require
 
 ### How?
 - Possibly the most competitive vertical within security software, Log Management/SIEM solutions are aplenty.
-- A wide array of open-source solutions are available, but usually require strong technicality and time to set up and operationalize. Common free-to-use solutions include the AlienVault SIEM, SecurityOnion and Wazuh.
+- A wide array of open-source solutions are available, but usually require strong technicality and time to set up and operationalize. Common free-to-use solutions include the [AlienVault SIEM](https://cybersecurity.att.com/products/ossim), [SecurityOnion](https://securityonion.net/) and [Wazuh](https://wazuh.com/).
 - You also have enterprise-scale fully-fledged solutions, aided by extensive machine learning, threat intelligence and automation provided by companies such as IBM, Exabeam and McAfee among many others.
-- Cloud Service Providers provide their own console interfaces for log analysis and security alerts, however, their scope might be limited to their own leased infrastructure alone. See, AWS CloudTrail.
-- One of the most comprehensive articles I have come across in explaining what an SIEM is, is available here.
+- Cloud Service Providers provide their own console interfaces for log analysis and security alerts, however, their scope might be limited to their own leased infrastructure alone. See [AWS CloudTrail](https://aws.amazon.com/cloudtrail/).
+- One of the most comprehensive articles I have come across in explaining what an SIEM is, is available [here](https://www.exabeam.com/siem-guide/what-is-siem/).
 
 ## Modelling and Risk Assessment
 ### What?
@@ -88,7 +90,7 @@ Regardless of the size of an organization, a successful security program require
 - This might seem like an obvious process to implement, however, its benefits are usually understated. Without thorough threat modelling and assessment, there is no plan. For example, analysing your software stack which might consist of message queues and load-balanced web servers ( quite a generic set-up for web applications ) — Web-app Firewalls, DoS/DDoS protection, Connection Throttling and a whole bunch of other technical controls come into the picture. These processes are highly situation-specific and require expertise within specific domains to recommend and implement.
 
 ### How?
-- SMBs usually do not have on-prem security folk. You could always reach out to organizations that carry out risk assessments and negotiate your scope and terms. Threat Modeling: Designing for Security — Adam Shostack explains the frameworks behind these processes brilliantly.
+- SMBs usually do not have on-prem security folk. You could always reach out to organizations that carry out risk assessments and negotiate your scope and terms. [Threat Modeling: Designing for Security — Adam Shostack](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998) explains the frameworks behind these processes brilliantly.
 
 
 ## Vulnerability Management and Patching
@@ -101,7 +103,7 @@ Regardless of the size of an organization, a successful security program require
 - **Patch management** as a process is essential to a successful program. Patches released by vendors usually address security, performance and configuration issues on a periodic basis and should be applied to keep your systems up to date.
 
 ### How?
-- Tenable Nessus and the open-source OpenVAS are arguably the most well-known scanners out there. Personally, I have used the free distribution of Nessus for periodically scanning my home network and have been more than happy with it. Both solutions offer a wide variety of scanning options, credentialed and non-credentialed, with updated information stores on the latest version details and patterns to look for across products, services and operating systems. Reporting options and extensibility through the API are offered by both.
+- [Tenable Nessus](https://www.tenable.com/products/nessus) and the [OpenVAS](http://www.openvas.org/) are arguably the most well-known scanners out there. Personally, I have used the free distribution of Nessus for periodically scanning my home network and have been more than happy with it. Both solutions offer a wide variety of scanning options, credentialed and non-credentialed, with updated information stores on the latest version details and patterns to look for across products, services and operating systems. Reporting options and extensibility through the API are offered by both.
 - With regards to patch management, you should be aware of possible system outages and downtimes that a patch failure could cause, for which you would need to be able to quickly roll-back or distribute workloads to a backup system.
 
 ## Privacy
@@ -111,7 +113,7 @@ Regardless of the size of an organization, a successful security program require
 
 ### Why?
 - Data breaches are the bane of the enterprise. Companies have suffered significant blows to revenue and reputation due to private customer data being made public.
-- This data goes beyond password leakage — and spans the domain of PII. PII includes names, addresses, phone numbers, email, blood groups, gender, birthdates, etc. A specific list can be found here.
+- This data goes beyond password leakage — and spans the domain of PII. PII includes names, addresses, phone numbers, email, blood groups, gender, birthdates, etc. A specific list can be found [here](https://en.wikipedia.org/wiki/Personal_data).
 
 ### How?
 - Large companies are having a tough time introducing these controls into their software stacks. These components were written at a time when customer privacy data was not a mainstream business requirement for success. Neither was it a legal requirement. Over the years, software evolved into highly complex systems and have formed legacy backbones. - - Patching software that runs so deep is not easy.
@@ -123,7 +125,7 @@ Regardless of the size of an organization, a successful security program require
 
 ### Why?
 - The majority of incidents occur due to end-user unawareness.
-- Over 90% of cyber incidents occur due to user unawareness through phishing.
+- Over 90% of cyber incidents occur due to user unawareness.
 
 ### How?
 - Not only is it important to safeguard user data and build systems that handle communication across the internet safely, but educating your associates is crucial.
@@ -132,8 +134,8 @@ Regardless of the size of an organization, a successful security program require
 - There are a range of companies that carry out these training programs. They also usually provide security incident simulation solutions within the company’s internal network to test associate awareness.
 
 ## Additional Resources
-If you are a company with compliance standards to be in accordance with, you should definitely also check out the Secure Controls Framework which maps controls to multiple frameworks and makes achieving said compliance much easier.
-The CIS Top 20 document is excellent in terms of splitting up control implementation and is generally regarded as a highly competent security program plan for any organization.
+If you are a company with compliance standards to be in accordance with, you should definitely also check out the [Secure Controls Framework](https://www.securecontrolsframework.com/) which maps controls to multiple frameworks and makes achieving said compliance much easier.
+The [CIS Top 20](https://www.cisecurity.org/controls/cis-controls-list/) document is excellent in terms of splitting up control implementation and is generally regarded as a highly competent security program plan for any organization.
 
 
 ## Beyond the Basics
