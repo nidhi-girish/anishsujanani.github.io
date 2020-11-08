@@ -1,7 +1,7 @@
 ## A commonly overlooked PHP programming flaw, Linux magic numbers, Python and NC. How much could go wrong?
 
 ## Understanding the Application
-**Navigating to our test application brings us to an upload page:**
+- **Navigating to our test application brings us to an upload page:**
 
 ```
 <html>
@@ -16,10 +16,7 @@
 ![webapp_1.png]({{site.baseurl}}/assets/img/webapp_1.PNG)
 
 
-**After uploading a file, we get back a link that we can follow to either view the image and/or share it with others:**
-
-![webapp_2.png]({{site.baseurl}}/assets/img/webapp_2.png)
-
+- **After uploading a file, we get back a link that we can follow to either view the image and/or share it with others:**
 
 ```
 if( isset($_POST["submit"]) ) {
@@ -37,8 +34,11 @@ else {
 	echo("Please upload a file.");
 }
 ```
+![webapp_2.png]({{site.baseurl}}/assets/img/webapp_2.png)
 
-**Viewing the image:**
+
+- **Viewing the image:**
+
 ```
 <?
   include("./uploads" . $_GET['id']);
@@ -71,6 +71,7 @@ Running the script, hexdump-ing the resulting image and running the OS provided 
 ![webapp_3.png]({{site.baseurl}}/assets/img/webapp_3.png)
 
 Magic bytes at the start of the file could get us past OS file checks as well as exif checks in PHP. Let’s introduce a heavily flawed practice to understand the damage these concepts could do together.
+
 `include(string $filename); // require() also problematic`
 
 *The include and require statements take all the text/code/markup that exists in the specified file and copies it into the file that uses these statements.*
