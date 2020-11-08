@@ -80,10 +80,10 @@ In case of our web application, once you upload an image, it is invoked server-s
 
 ## What happens if we embed PHP?
 ### Server-side execution
-![webapp_4.png]({{site.baseurl}}/assets/img/webapp_4.PNG)
+![webapp_4.png]({{site.baseurl}}/assets/img/webapp_4.png)
 
 Once uploaded, we get the following:
-![webapp_5.png]({{site.baseurl}}/assets/img/webapp_5.PNG)
+![webapp_5.png]({{site.baseurl}}/assets/img/webapp_5.png)
 
 On clicking the image, the server would `include()` the file we just uploaded, causing the payload to run, resulting in:
 ![webapp_6.png]({{site.baseurl}}/assets/img/webapp_6.png)
