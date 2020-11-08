@@ -1,7 +1,7 @@
 ## A commonly overlooked PHP programming flaw, Linux magic numbers, Python and NC. How much could go wrong?
 
 ## Understanding the Application
-- Navigating to our test application brings us to an upload page:
+**Navigating to our test application brings us to an upload page:**
 
 ```
 <html>
@@ -12,31 +12,33 @@
   </form>
 </html>
 ```
+
 ![webapp_1.png]({{site.baseurl}}/assets/img/webapp_1.png)
 
-- After uploading a file, we get back a link that we can follow to either view the image and/or share it with others:
+
+**After uploading a file, we get back a link that we can follow to either view the image and/or share it with others:**
+
 ![webapp_2.png]({{site.baseurl}}/assets/img/webapp_2.png)
 
+
 ```
-<?
-  if( isset($_POST["submit"]) ) {
-    $upload_dir = "./uploads";
-    $upload_name = $upload_dir . $_FILES["userfile"]["name"];
-    if( move_uploaded_file($_FILES["userfile"]["tmpname"], $upload_name) ) {
-      echo("Success! Here's the image you uploaded: <br><br>");
-      echo("View/Share link: <a href='http://localhost:5000/view.php?id='" . $_FILES["userfile"]["name"] . "'>Share!</a>);
-    }
-    else {
-      echo("Upload error");
-    }
-  }
-  else {
-    echo("Please upload a file.");
-  }
-?>
+if( isset($_POST["submit"]) ) {
+	$upload_dir = "./uploads";
+	$upload_name = $upload_dir . $_FILES["userfile"]["name"];
+	if( move_uploaded_file($_FILES["userfile"]["tmpname"], $upload_name) ) {
+		echo("Success! Here's the image you uploaded: <br><br>");
+		echo("View/Share link: <a href='http://localhost:5000/view.php?id='" . $_FILES["userfile"]["name"] . "'>Share!</a>);
+	}
+	else {
+		echo("Upload error");
+	}
+}
+else {
+	echo("Please upload a file.");
+}
 ```
 
-- Viewing the image:
+**Viewing the image:**
 ```
 <?
   include("./uploads" . $_GET['id']);
