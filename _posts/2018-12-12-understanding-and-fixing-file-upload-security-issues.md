@@ -2,8 +2,9 @@
 
 ## Understanding the Application
 - Navigating to our test application brings us to an upload page:
+
 ```
-<html<
+<html>
   <h1>Upload an image:</h1>
   <form action="upload.php" method="POST" enctype="multipart/form-data"">
     <input type="file" name="userfile" />
@@ -17,7 +18,7 @@
 ![webapp_2.png]({{site.baseurl}}/assets/img/webapp_2.png)
 
 ```
-<?php
+<?
   if( isset($_POST["submit"]) ) {
     $upload_dir = "./uploads";
     $upload_name = $upload_dir . $_FILES["userfile"]["name"];
@@ -37,7 +38,7 @@
 
 - Viewing the image:
 ```
-<? php
+<?
   include("./uploads" . $_GET['id']);
   // storing the above in a variable, further processing ...
 ?>
