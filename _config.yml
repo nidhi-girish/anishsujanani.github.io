@@ -3,7 +3,7 @@ author: Nidhi Girish # name of site's author
 #email: riccardo.graziosi97@gmail.com # email of site's author
 #url: https://riggraz.dev # root address of the site
 #baseurl: "/no-style-please" # subpath of the site, e.g. "/blog"
-description: Immunology | Vaccine Research # description of the site (multiple lines allowed)
+description: Immunology | Vaccine Research | Pathogen Biology # description of the site (multiple lines allowed)
 
 permalink: /:slug.html
 
