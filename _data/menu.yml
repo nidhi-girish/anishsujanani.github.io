@@ -3,10 +3,19 @@
 
 entries:
   - title: Publications
-    post_list: true
     url: false
+    entries:
+      - title: Design of a highly thermotolerant, immunogenic SARS-CoV-2 spike fragment immunogen 
+        url: https://www.jbc.org/content/early/2020/11/05/jbc.RA120.016284.full.pdf+html
+      - title: Bacterial biofilm inhibition activity of ethanolic extract of Hemidesmus indicus
+        url: http://op.niscair.res.in/index.php/IJTK/article/view/41439/465477990
+      - title: In-vitro antibacterial activity of ethanolic extracts of Hemidesmus indicus and Simarouba glauca.
+        url: http://www.rjlbpcs.com/article-pdf-downloads/2018/22/444.pdf
 
   - title: Blog Posts
-    post_list: true
     url: false
+    entries:
+      - title: How do Vaccines work?
+        url: False
+      
     
