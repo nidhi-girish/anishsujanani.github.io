@@ -12,7 +12,7 @@ entries:
       - title: In-vitro antibacterial activity of ethanolic extracts of Hemidesmus indicus and Simarouba glauca.
         url: http://www.rjlbpcs.com/article-pdf-downloads/2018/22/444.pdf
 
-- title: Current Reads | Book reviews
+  - title: Current Reads | Book reviews
     url: false
     entries:
       - title: The Selfish Gene by Richard Dawkins
